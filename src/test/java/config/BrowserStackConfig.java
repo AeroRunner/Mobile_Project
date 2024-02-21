@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources(
-        {"classpath:browserStack.properties"}
+        {"classpath:remote.properties"}
 )
 public interface BrowserStackConfig extends Config {
     @Key("user")
