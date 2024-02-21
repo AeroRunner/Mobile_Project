@@ -1,5 +1,7 @@
-# Проект по автоматизации проверок для сайта Pikabu
-[Pikabu.ru](https://pikabu.ru/) : это русскоязычное информационно-развлекательное сообщество, является адаптированным аналогом англоязычного портала Reddit.
+# Проект по автоматизации проверок для мобильного приложения Wikipedia
+<img width="100%" title="Java" src="mediaReadme/logo/wiki.png">
+
+[Wikipedia](https://www.wikipedia.org/) : это общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на принципах вики.
 ## :scroll: Содержание:
 
 - [Используемый стек](#computer-используемый-стек)
@@ -22,10 +24,11 @@
 <img width="8%" title="Allure TestOps" src="mediaReadme/logo/AllureTestOps.svg">
 <img width="8%" title="Gradle" src="mediaReadme/logo/Gradle.svg">
 <img width="8%" title="JUnit5" src="mediaReadme/logo/JUnit5.svg">
-<img width="8%" title="GitHub" src="mediaReadme/logo/GitHub.svg">
 <img width="8%" title="Jenkins" src="mediaReadme/logo/Jenkins.svg">
 <img width="8%" title="Telegram" src="mediaReadme/logo/Telegram.svg">
 <img width="8%" title="Jira" src="mediaReadme/logo/Jira.svg">
+<img width="8%" title="Jira" src="mediaReadme/logo/Appium.svg">
+<img width="8%" title="Jira" src="mediaReadme/logo/Browserstack.svg">
 </p>
 
 - Язык для написания тестов : [Java](https://www.java.com/ru/)
@@ -38,40 +41,24 @@
 - Так же отчеты о тестировании отправляются в мессенджер при помощи <code>Telegram</code> бота
 - Реализована интеграция  с [Allure TestOps](https://qameta.io/)
 - Реализована интеграция с [Jira Software](https://www.atlassian.com/software/jira)
+- Тесты мобильного приложения проходят на сервисе <code>BrowserStack</code>
 
-## :computer: Список auto-тестов проекта Pikabu.ru
-* Проверка появления popup-a при попытке подписаться на сообщество, если пользователь не авторизирован
-* Проверка поиска контента по тегу из случайной новости на странице сообщества
-* Проверка поиска контента по тегу из поиска новостей на странцие сообщества
-* Проверка отображения кнопок меня на главной странице сайта
-* Проверка работы первого уведомления при входе неавторизованного пользователя на сайт
-* Проверка оповещений сайта при неудачной авторизации на главной странице
-* Проверка появления капчи при неудачной авторизации на главной странице
-* Проверка работы окна авторизации из уведомления неавторизированному пользователю на сайте
+## :computer: Список auto-тестов мобильного приложения Wikipedia
+* Проверка выдачи статей после запроса в поиске
+* Проверка краткого описания стаьи
+* Проверка выдачи ошибки после клика по статье
 
-## :computer: Список manual-тестов проекта Pikabu.ru
-* Проверка перехода по внешним ссылкам авторизации
-* Проверка перехода на страницу с промокодами
-* Проверка поиска вакансии
 
 ## :arrow_forward: Запуск автотестов
 
 ### Команда запуска тестов локально в IDE
-* <code>gradle clean mainPageLocal_test -Dhost=local </code> : Запуск всех тестов на главной странице
-* <code>gradle clean notif_test -Dhost=local </code> : Запуск всех тестов, связанных с уведомлением
-* <code>gradle clean  community_test </code> : Запуск всех тестов, связанных с тегами и страницей сообщества
-* <code>gradle clean allTests_local -Dhost=local </code> : Запуск всех тестов проекта
+* <code>gradle clean clean test  </code> : Запуск тестов в BrowserStack
 
 ### Команда запуска тестов в Jenkins
 ```
 gradle clean
 ${TASK}
--Dbrowser=${BROWSER}
--Dversion=${VERSION}
--Dsize=${SIZE}
 ```
-При запуске из <code>Jenkins</code> тест будет выполняться удаленно в браузере при помощи <code>Selenoid</code>
-
 
 ## <img width="7%" style="vertical-align:middle" title="Jenkins" src="mediaReadme/logo/Jenkins.svg"> Автоматическая сборка в Jenkins
 
@@ -124,7 +111,7 @@ ${TASK}
 <img width="70%" title="Telegram Notifications" src="mediaReadme/screens/TelegramScreen1.png"> 
 </p>
 
-### <img width="7%" style="vertical-align:middle" title="Selenoid" src="mediaReadme/logo/Selenoid.svg"> Selenoid : Видео прохождения теста в отчете
+### <img width="6%" style="vertical-align:middle" title="Selenoid" src="mediaReadme/logo/BrowserStack.svg"> BrowserStack : Видео прохождения теста в отчете
 
 При интеграции с <code>AllureReports</code> вместе с общим результатом  тест-кейса прикладываются media файлы : скриншот и видео. Вот пример видео в отчете о завершенном тесте:
 <p align="center">
