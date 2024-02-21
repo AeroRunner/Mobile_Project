@@ -62,9 +62,9 @@ ${TASK}
 
 ## <img width="7%" style="vertical-align:middle" title="Jenkins" src="mediaReadme/logo/Jenkins.svg"> Автоматическая сборка в Jenkins
 
-Для запуска сборки необходимо перейти в раздел <code>Build with Parameters</code>, выбрать нужные вам параметры в <code>browser,size,version</code> и нажать кнопку <code>Build</code>.
+Для запуска сборки необходимо нажать кнопку <code>Build Now</code>.
 <p align="center">
-<img title="Jenkins Build" src="mediaReadme/gif/Jenkins.gif">
+<img title="Jenkins Build" src="mediaReadme/screens/JenkinsBuild.png">
 </p>
 В блоке <code>Build History</code> после завершения сборки в поле с номером сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, кликнув на них можно перейти в отчетность.
 
@@ -84,7 +84,7 @@ ${TASK}
 * Динамика успешности прохождения в течении времени
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="mediaReadme/screens/TestOpsDashboard.png">
+<img title="Allure TestOps DashBoard" src="mediaReadme/screens/AllureTestOpsDashboard.png">
 </p>
 
 ### Результат выполнения автотеста
@@ -92,7 +92,7 @@ ${TASK}
 В разделе *Test Results* уже можно детально посмотреть каждый кейс, там будут расписаны шаги и результаты. Так же в этом разделе можно добавить новые кейслы на проверку или оставить комментарии уже существующим для доработки.
 
 <p align="center">
-<img title="Test Results in Alure TestOps" src="mediaReadme/screens/TestOpsSteps.png">
+<img title="Test Results in Alure TestOps" src="mediaReadme/screens/TestOpsCases.png">
 </p>
 
 ## <img width="7%" style="vertical-align:middle" title="Jira" src="mediaReadme/logo/Jira.svg"> Jira : выведение результатов в таски
@@ -115,6 +115,6 @@ ${TASK}
 
 При интеграции с <code>AllureReports</code> вместе с общим результатом  тест-кейса прикладываются media файлы : скриншот и видео. Вот пример видео в отчете о завершенном тесте:
 <p align="center">
-  <img title="Selenoid Browser Video" src="mediaReadme/gif/SelenoidTest.gif">
+  <img title="Selenoid Browser Video" src="mediaReadme/gif/MobileGifCase.gif">
 </p>
 
