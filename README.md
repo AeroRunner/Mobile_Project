@@ -1,5 +1,5 @@
 # Проект по автоматизации проверок для мобильного приложения Wikipedia
-<img width="90%" title="Java" src="mediaReadme/logo/Wiki.png">
+<img width="110%" title="Java" src="mediaReadme/logo/Wiki.png">
 
 [Wikipedia](https://www.wikipedia.org/) : это общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на принципах вики.
 ## :scroll: Содержание:
